@@ -348,6 +348,11 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 			View tab = tabsContainer.getChildAt(i);
 			canvas.drawLine(tab.getRight(), dividerPadding, tab.getRight(), height - dividerPadding, dividerPaint);
 		}
+
+    // set state
+    for (int i = 0; i < tabCount; i++) {
+      tab.setSelected(tab == currentTab);
+    }
 	}
 
 	private class PageListener implements OnPageChangeListener {
